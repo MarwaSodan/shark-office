@@ -940,6 +940,64 @@ h6 {
 	padding: 13px 43px;
 }
 
+@media (max-width: 991px) {
+	.foliox_tm_about .wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.foliox_tm_about .left,
+	.foliox_tm_about .right {
+		width: 100%;
+		padding: 0;
+		text-align: center;
+	}
+
+	.foliox_tm_about .right {
+		margin-top: 40px;
+		top: 0;
+	}
+
+	.foliox_tm_about .big_image img {
+		width: 100%;
+		height: auto;
+		max-width: 100%;
+	}
+
+	.foliox_tm_about .small_image {
+		position: relative;
+		right: auto;
+		top: auto;
+		margin: 20px auto 0;
+		text-align: center;
+	}
+
+	.foliox_tm_about .experience {
+		position: relative;
+		left: auto;
+		margin: 20px auto 0;
+	}
+
+	.foliox_tm_about .badge {
+		position: relative;
+		top: auto;
+		right: auto;
+		margin: 20px auto;
+	}
+
+	.foliox_tm_about .right .list>ul>li {
+		width: 100%;
+	}
+
+	.foliox_tm_about .big_image {
+		width: 100%;
+		text-align: center;
+	}
+
+}
+
+
+
 /*---------------------------------------------------*/
 /*	07) SHARK COUNTER
 /*---------------------------------------------------*/
