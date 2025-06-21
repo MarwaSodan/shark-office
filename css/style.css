@@ -1,34 +1,7 @@
 @charset "utf-8";
 
-/*	Copyright (c) 2022 Marketify
-/*	Author: Marketify
-/*	This file is made for CURRENT TEMPLATE
-
-
-01)	FOLIOX BASE
-02) FOLIOX MOBILE MENU
-03) FOLIOX HEADER
-04) FOLIOX HERO
-05) FOLIOX FEATURES
-06) FOLIOX ABOUT
-07) FOLIOX COUNTER
-08) FOLIOX SKILLS
-09) FOLIOX SERVICE
-10) FOLIOX RESUME
-11) FOLIOX PORTFOLIO
-12) FOLIOX TESTIMONIALS
-13) FOLIOX PARTNERS
-14) FOLIOX NEWS
-15) FOLIOX CONTACT
-16) FOLIOX SUBSCRIBE
-17) FOLIOX COPYRIGHT
-18) FOLIOX MAGIC CURSOR
-19) FOLIOX TOTOP
-20) FOLIOX MEDIA QUERIES (FOR SMALL DEVICES)
-
-
 /*---------------------------------------------------*/
-/*	01) FOLIOX BASE
+/*	01) SHARK BASE
 /*---------------------------------------------------*/
 
 a {
@@ -331,7 +304,7 @@ h6 {
 }
 
 /*---------------------------------------------------*/
-/*	02) FOLIOX MOBILE MENU
+/*	02) SHARK MOBILE MENU
 /*---------------------------------------------------*/
 
 .foliox_tm_mobile_menu {
@@ -437,7 +410,7 @@ h6 {
 }
 
 /*---------------------------------------------------*/
-/*	03) FOLIOX HEADER
+/*	03) SHARK HEADER
 /*---------------------------------------------------*/
 
 .foliox_tm_header {
@@ -468,19 +441,17 @@ h6 {
 }
 
 .foliox_tm_header .logo img {
-	width: 300px;
-	height: 400px;
-
-	-webkit-transition: all .3s ease;
-	-moz-transition: all .3s ease;
-	-ms-transition: all .3s ease;
-	-o-transition: all .3s ease;
-	transition: all .3s ease;
+	width: 300px !important;
+	height: auto !important;
+	max-height: none !important;
+	transition: all 0.3s ease;
 }
+
 
 .foliox_tm_header.animate .logo img {
-	max-width: 200px;
+	width: 130px !important;
 }
+
 
 .foliox_tm_header .details {
 	display: flex;
@@ -563,7 +534,7 @@ h6 {
 }
 
 ---------------------------------------------------
-/*	04) FOLIOX HERO
+/*	04) SHARK HERO
 /*---------------------------------------------------*/
 
 .foliox_tm_hero {
@@ -676,7 +647,7 @@ h6 {
 
 
 /*---------------------------------------------------*/
-/*	05) FOLIOX FEATURES
+/*	05) SHARK FEATURES
 /*---------------------------------------------------*/
 
 .foliox_tm_features {
@@ -744,7 +715,7 @@ h6 {
 }
 
 /*---------------------------------------------------*/
-/*	06) FOLIOX ABOUT
+/*	06) SHARK ABOUT
 /*---------------------------------------------------*/
 
 .foliox_tm_main_title {
@@ -860,7 +831,6 @@ h6 {
 	top: 100%;
 	left: 138px;
 	margin-top: 35px;
-	/* margin-left: 2rem; */
 }
 
 .foliox_tm_about .experience .inner {
@@ -969,7 +939,7 @@ h6 {
 }
 
 /*---------------------------------------------------*/
-/*	07) FOLIOX COUNTER
+/*	07) SHARK COUNTER
 /*---------------------------------------------------*/
 
 .foliox_tm_counter {
@@ -1031,12 +1001,11 @@ h6 {
 	font-family: var(--font-family-extra);
 	font-weight: 500;
 	display: inline-block;
-	/* padding-left: 26px; */
 	text-align: start;
 }
 
 /*---------------------------------------------------*/
-/*	08) FOLIOX SKILLS
+/*	08) SHARK SKILLS
 /*---------------------------------------------------*/
 
 .foliox_tm_skills {
@@ -1117,7 +1086,6 @@ h6 {
 	right: 100%;
 	bottom: -2px;
 	transition: all 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	/* IE 10+ */
 	color: var(--extra-color);
 	font-size: 18px;
 	font-family: var(--font-family-extra);
@@ -1150,11 +1118,8 @@ h6 {
 
 .progress_inner .background .bar.open {
 	-webkit-animation: wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	/* Safari 4+ */
 	-moz-animation: wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	/* Fx 5+ */
 	animation: wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	/* IE 10+ */
 	width: 100%;
 }
 
@@ -1188,8 +1153,65 @@ h6 {
 	}
 }
 
+@media (max-width: 992px) {
+	.foliox_tm_counter .counter_list ul {
+		margin-left: 0;
+	}
+
+	.foliox_tm_counter .counter_list ul li {
+		width: 50%;
+		padding-left: 15px;
+		margin-bottom: 30px;
+	}
+
+	.foliox_tm_counter .counter_list ul li .list_inner {
+		padding: 50px 20px;
+	}
+
+	.foliox_tm_counter .counter_list ul li .list_inner h3 {
+		font-size: 30px;
+		text-align: center;
+	}
+
+	.foliox_tm_counter .counter_list ul li .title {
+		text-align: center;
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 576px) {
+	.foliox_tm_counter .counter_list ul {
+		flex-direction: column;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	.foliox_tm_counter .counter_list ul li {
+		width: 100% !important;
+		padding: 0;
+		margin-bottom: 20px;
+	}
+
+	.foliox_tm_counter .counter_list ul li .list_inner {
+		width: 100%;
+		padding: 40px 20px;
+		text-align: center;
+	}
+
+	.foliox_tm_counter .counter_list ul li .list_inner h3 {
+		font-size: 28px;
+	}
+
+	.foliox_tm_counter .counter_list ul li .title {
+		font-size: 15px;
+	}
+}
+
+
+
+
 /*---------------------------------------------------*/
-/*	09) FOLIOX SERVICE
+/*	09) SHARK SERVICE
 /*---------------------------------------------------*/
 
 .foliox_tm_services {
@@ -1295,8 +1317,48 @@ h6 {
 	margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+	.foliox_tm_services .list ul {
+		flex-direction: column;
+		margin: 0;
+		padding: 0;
+	}
+
+	.foliox_tm_services .list ul li {
+		width: 100%;
+		padding-left: 0;
+		margin-bottom: 20px;
+	}
+
+	.foliox_tm_services .list ul li .list_inner {
+		padding: 60px 30px 50px 30px;
+	}
+
+	.foliox_tm_services .list ul li .icon {
+		width: 120px;
+		height: 120px;
+		margin-bottom: 30px;
+	}
+
+	.foliox_tm_services .list ul li .icon .svg {
+		width: 100px;
+		height: 100px;
+		top: 26%;
+		left: 26%;
+	}
+
+
+	.foliox_tm_services .list ul li .title {
+		font-size: 20px;
+	}
+
+	.foliox_tm_services .list ul li .text {
+		font-size: 14px;
+	}
+}
+
 /*---------------------------------------------------*/
-/*	10) FOLIOX RESUME
+/*	10) Shark RESUME
 /*---------------------------------------------------*/
 
 .foliox_tm_resume {
@@ -1392,7 +1454,7 @@ h6 {
 	width: 50px;
 	height: 50px;
 	position: absolute;
-	top: 60%;
+	top: 65%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: #fff;
@@ -1428,7 +1490,7 @@ h6 {
 }
 
 /*---------------------------------------------------*/
-/*	11) FOLIOX PORTFOLIO
+/*	11) SHARK Explore
 /*---------------------------------------------------*/
 
 .foliox_tm_portfolio {
@@ -1514,7 +1576,7 @@ h6 {
 .foliox_tm_portfolio .portfolio_list ul li .image {
 	position: relative;
 	width: 100%;
-	aspect-ratio: 2 / 1.5; /* يحافظ على التناسق بدل height ثابت */
+	aspect-ratio: 2 / 1.5;
 	border-radius: 20px;
 	overflow: hidden;
 
@@ -1879,8 +1941,54 @@ h6 {
 	border-radius: 12px;
 }
 
+@media (max-width: 992px) {
+	.foliox_tm_portfolio .portfolio_list ul li {
+		width: 50%;
+	}
+}
+
+@media (max-width: 768px) {
+	.foliox_tm_portfolio .portfolio_list ul li {
+		width: 100%;
+		padding-left: 0;
+	}
+
+	.foliox_tm_portfolio .portfolio_list ul {
+		margin-left: 0;
+	}
+
+	.foliox_tm_portfolio .portfolio_list ul li .image {
+		aspect-ratio: 1.5 / 1;
+		max-height: 220px;
+		border-radius: 12px;
+	}
+
+	.foliox_tm_portfolio .portfolio_list ul li .image .main {
+		background-size: cover;
+		background-position: center;
+	}
+
+	.foliox_tm_portfolio .portfolio_list ul li .details {
+		bottom: 10px;
+		left: 10px;
+		right: 10px;
+		padding: 12px;
+		border-radius: 10px;
+	}
+
+	.foliox_tm_portfolio .portfolio_list ul li .details h3 {
+		font-size: 16px;
+	}
+
+	.foliox_tm_portfolio .portfolio_list ul li .details span {
+		font-size: 14px;
+	}
+}
+
+
+
 /*---------------------------------------------------*/
-/*	12) FOLIOX TESTIMONIALS
+/*	12) Shark TESTIMONIALS
 /*---------------------------------------------------*/
 
 .foliox_tm_testimonials {
@@ -2026,7 +2134,7 @@ h6 {
 }
 
 /*---------------------------------------------------*/
-/*	13) FOLIOX PARTNERS
+/*	13) SHARK PARTNERS
 /*---------------------------------------------------*/
 
 .foliox_tm_partners {
@@ -2082,7 +2190,7 @@ h6 {
 }
 
 /*---------------------------------------------------*/
-/*	14) FOLIOX NEWS
+/*	14) SHARK NEWS
 /*---------------------------------------------------*/
 
 .foliox_tm_news {
@@ -2281,7 +2389,7 @@ h6 {
 }
 
 /*---------------------------------------------------*/
-/*	15) FOLIOX CONTACT
+/*	15) Shark CONTACT
 /*---------------------------------------------------*/
 
 .foliox_tm_contact {
@@ -2340,6 +2448,7 @@ h6 {
 
 .foliox_tm_contact .left .short {
 	padding-left: 25px;
+	text-align: start;
 }
 
 .foliox_tm_contact .left .short h3 {
@@ -2411,10 +2520,8 @@ h6 {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-	/* display: none; <- Crashes Chrome on hover */
 	-webkit-appearance: none;
 	margin: 0;
-	/* <-- Apparently some margin are still there even though it's hidden */
 }
 
 input[type=number] {
@@ -2467,7 +2574,7 @@ input[type=number] {
 }
 
 /*---------------------------------------------------*/
-/*	16) FOLIOX SUBSCRIBE
+/*	16) Shark SUBSCRIBE
 /*---------------------------------------------------*/
 
 .foliox_tm_subscribe {
@@ -2549,7 +2656,7 @@ input[type=number] {
 }
 
 /*---------------------------------------------------*/
-/*	17) FOLIOX COPYRIGHT
+/*	17) Shark COPYRIGHT
 /*---------------------------------------------------*/
 
 .foliox_tm_copyright {
@@ -2580,7 +2687,7 @@ input[type=number] {
 }
 
 /*---------------------------------------------------*/
-/*	18) FOLIOX MAGIC CURSOR
+/*	18) shark MAGIC CURSOR
 /*---------------------------------------------------*/
 
 .mouse-cursor {
@@ -2688,7 +2795,7 @@ input[type=number] {
 }
 
 /*---------------------------------------------------*/
-/*	20) FOLIOX MEDIA QUERIES (FOR SMALL DEVICES)
+/*	20) shark MEDIA QUERIES (FOR SMALL DEVICES)
 /*---------------------------------------------------*/
 
 @media (max-width: 1600px) {
