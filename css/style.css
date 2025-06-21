@@ -17,8 +17,8 @@ a {
 
 html {
 	overflow-x: hidden;
-	padding: 0px;
-	margin: 0px
+	padding: 0px !important;
+	margin: 0px !important;
 }
 
 body {
@@ -108,7 +108,7 @@ body::-webkit-scrollbar-thumb {
 	margin-left: auto;
 	margin-right: auto;
 	height: auto;
-	padding: 0px 40px;
+	padding: 0px 20px !important;
 	position: relative;
 	clear: both;
 }
@@ -548,6 +548,8 @@ h6 {
 	height: 100vh;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	margin-top: 4rem;
 }
 
 .foliox_tm_hero .left {
