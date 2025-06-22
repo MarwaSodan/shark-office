@@ -1412,12 +1412,21 @@ h6 {
 	}
 
 	.shark_tm_services .list ul li .icon .svg {
-		width: 100px;
-		height: 100px;
+		width: 80px;
+		height: 80px;
 		top: 26%;
 		left: 26%;
 	}
 
+	.shark_tm_services .list ul li .list_inner:hover .icon .svg {
+		color: #fff;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+	}
 
 	.shark_tm_services .list ul li .title {
 		font-size: 20px;
