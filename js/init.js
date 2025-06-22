@@ -10,27 +10,27 @@ jQuery(document).ready(function(){
 	
 	// here all ready functions
 	
-	foliox_tm_modalbox();
-	foliox_tm_nav_bg();
-	foliox_tm_trigger_menu();
-	foliox_tm_modalbox_news();
-	foliox_tm_modalbox_portfolio();
-	foliox_tm_portfolio();
+	shark_tm_modalbox();
+	shark_tm_nav_bg();
+	shark_tm_trigger_menu();
+	shark_tm_modalbox_news();
+	shark_tm_modalbox_portfolio();
+	shark_tm_portfolio();
 	progress_by_frenify();
-	foliox_tm_cursor();
-	foliox_tm_imgtosvg();
-	foliox_tm_popup();
-	foliox_tm_data_images();
-	foliox_tm_contact_form();
-	foliox_tm_owl_carousel();
-	foliox_tm_totop();
-	foliox_tm_down();
+	shark_tm_cursor();
+	shark_tm_imgtosvg();
+	shark_tm_popup();
+	shark_tm_data_images();
+	shark_tm_contact_form();
+	shark_tm_owl_carousel();
+	shark_tm_totop();
+	shark_tm_down();
 	
 	jQuery(window).load('body', function(){
-		foliox_tm_my_load();
+		shark_tm_my_load();
 	});
 	jQuery(window).on('scroll', function(){
-		foliox_tm_progress_line();
+		shark_tm_progress_line();
 	});
 	
 });
@@ -43,23 +43,23 @@ jQuery(document).ready(function(){
 // --------------------   MODALBOX    ------------------
 // -----------------------------------------------------
 
-function foliox_tm_modalbox(){
+function shark_tm_modalbox(){
 	
 	"use strict";
 	
-	jQuery('.foliox_tm_all_wrap').prepend('<div class="foliox_tm_modalbox"><div class="box_inner"><div class="close"><a href="#"><i class="icon-cancel"></i></a></div><div class="description_wrap"></div></div></div>');
+	jQuery('.shark_tm_all_wrap').prepend('<div class="shark_tm_modalbox"><div class="box_inner"><div class="close"><a href="#"><i class="icon-cancel"></i></a></div><div class="description_wrap"></div></div></div>');
 }
 
 // -------------------------------------------------
 // -------------   TOPBAR BG SCROLL  ---------------
 // -------------------------------------------------
 
-function foliox_tm_nav_bg(){
+function shark_tm_nav_bg(){
 	
 	"use strict";
 	
 	jQuery(window).on('scroll',function(){
-		var menu	 		= jQuery('.foliox_tm_header');
+		var menu	 		= jQuery('.shark_tm_header');
 		var progress	 	= jQuery('.progressbar');
 		var WinOffset		= jQuery(window).scrollTop();
 		
@@ -77,13 +77,13 @@ function foliox_tm_nav_bg(){
 // ---------------   TRIGGER MENU    -------------------
 // -----------------------------------------------------
 
-function foliox_tm_trigger_menu(){
+function shark_tm_trigger_menu(){
 	
 	"use strict";
 
 	var hamburger 		= jQuery('.trigger .hamburger');
-	var mobileMenu		= jQuery('.foliox_tm_mobile_menu .dropdown');
-	var mobileMenuList	= jQuery('.foliox_tm_mobile_menu .dropdown .dropdown_inner ul li a');
+	var mobileMenu		= jQuery('.shark_tm_mobile_menu .dropdown');
+	var mobileMenuList	= jQuery('.shark_tm_mobile_menu .dropdown .dropdown_inner ul li a');
 
 	hamburger.on('click',function(){
 		var element 	= jQuery(this);
@@ -109,12 +109,12 @@ function foliox_tm_trigger_menu(){
 // -------------  MODALBOX NEWS  -------------------
 // -------------------------------------------------
 
-function foliox_tm_modalbox_news(){
+function shark_tm_modalbox_news(){
 	
 	"use strict";
 	
-	var modalBox		= jQuery('.foliox_tm_modalbox');
-	var button			= jQuery('.foliox_tm_news .foliox_tm_full_link,.foliox_tm_news .details .title a');
+	var modalBox		= jQuery('.shark_tm_modalbox');
+	var button			= jQuery('.shark_tm_news .shark_tm_full_link,.shark_tm_news .details .title a');
 	var closePopup		= modalBox.find('.close');
 	
 	button.on('click',function(){
@@ -128,7 +128,7 @@ function foliox_tm_modalbox_news(){
 		modalBox.find('.description_wrap').html(content);
 		modalBox.find('.news_popup_informations').prepend('<div class="image"><img src="img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+image+'"></div></div>');
 		modalBox.find('.news_popup_informations .image').after('<div class="details"><div class="meta">'+meta+'</div><div class="title"><h3>'+title+'</h3></div><div>');
-		foliox_tm_data_images();
+		shark_tm_data_images();
 		return false;
 	});
 	closePopup.on('click',function(){
@@ -142,12 +142,12 @@ function foliox_tm_modalbox_news(){
 // -------------  MODALBOX PORTFOLIO  --------------
 // -------------------------------------------------
 
-function foliox_tm_modalbox_portfolio(){
+function shark_tm_modalbox_portfolio(){
 	
 	"use strict";
 	
-	var modalBox		= jQuery('.foliox_tm_modalbox');
-	var button			= jQuery('.foliox_tm_portfolio .portfolio_popup');
+	var modalBox		= jQuery('.shark_tm_modalbox');
+	var button			= jQuery('.shark_tm_portfolio .portfolio_popup');
 	var closePopup		= modalBox.find('.close');
 	
 	button.off().on('click',function(){
@@ -160,7 +160,7 @@ function foliox_tm_modalbox_portfolio(){
 		modalBox.find('.description_wrap').html(content);
 		modalBox.find('.popup_details').prepend('<div class="top_image"><img src="img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+image+'"></div></div>');
 		modalBox.find('.popup_details .top_image').after('<div class="portfolio_main_title">'+details+'<div>');
-		foliox_tm_data_images();
+		shark_tm_data_images();
 		return false;
 	});
 	closePopup.on('click',function(){
@@ -172,21 +172,21 @@ function foliox_tm_modalbox_portfolio(){
 
 // filterable 
 
-function foliox_tm_portfolio(){
+function shark_tm_portfolio(){
 
 	"use strict";
 
 	if(jQuery().isotope) {
 
 		// Needed variables
-		var filter		 = jQuery('.foliox_tm_portfolio .portfolio_filter ul');
+		var filter		 = jQuery('.shark_tm_portfolio .portfolio_filter ul');
 
 		if(filter.length){
 			// Isotope Filter 
 			filter.find('a').on('click', function(){
 				var element		= jQuery(this);
 				var selector 	= element.attr('data-filter');
-				var list		= element.closest('.foliox_tm_portfolio').find('.portfolio_list').children('ul');
+				var list		= element.closest('.shark_tm_portfolio').find('.portfolio_list').children('ul');
 				list.isotope({ 
 					filter				: selector,
 					animationOptions	: {
@@ -248,7 +248,7 @@ function progress_by_frenify(wrapper){
 // ---------------   PRELOADER   -----------------------
 // -----------------------------------------------------
 
-function foliox_tm_preloader(){
+function shark_tm_preloader(){
 	
 	"use strict";
 	
@@ -296,19 +296,19 @@ jQuery('.tm_counter').each(function() {
 // -----------------   MY LOAD    ----------------------
 // -----------------------------------------------------
 
-function foliox_tm_my_load(){
+function shark_tm_my_load(){
 	
 	"use strict";
 	
 	var speed	= 500;
-	setTimeout(function(){foliox_tm_preloader();},speed);
+	setTimeout(function(){shark_tm_preloader();},speed);
 }
 
 // -----------------------------------------------------
 // ------------------   CURSOR    ----------------------
 // -----------------------------------------------------
 
-function foliox_tm_cursor(){
+function shark_tm_cursor(){
 	
     "use strict";
 	
@@ -335,7 +335,7 @@ function foliox_tm_cursor(){
 // ---------------    IMAGE TO SVG    ------------------
 // -----------------------------------------------------
 
-function foliox_tm_imgtosvg(){
+function shark_tm_imgtosvg(){
 	
 	"use strict";
 	
@@ -369,7 +369,7 @@ function foliox_tm_imgtosvg(){
 // --------------------   POPUP    ---------------------
 // -----------------------------------------------------
 
-function foliox_tm_popup(){
+function shark_tm_popup(){
 	
 	"use strict";
 
@@ -408,7 +408,7 @@ function foliox_tm_popup(){
 // ---------------   DATA IMAGES    --------------------
 // -----------------------------------------------------
 
-function foliox_tm_data_images(){
+function shark_tm_data_images(){
 	
 	"use strict";
 	
@@ -425,7 +425,7 @@ function foliox_tm_data_images(){
 // ----------------    CONTACT FORM    -----------------
 // -----------------------------------------------------
 
-function foliox_tm_contact_form(){
+function shark_tm_contact_form(){
 	
 	"use strict";
 	
@@ -471,11 +471,11 @@ function foliox_tm_contact_form(){
 // ----------------    OWL CAROUSEL    -----------------
 // -----------------------------------------------------
 
-function foliox_tm_owl_carousel(){
+function shark_tm_owl_carousel(){
 
 	"use strict";
 	
-	var carousel			= jQuery('.foliox_tm_testimonials .owl-carousel');
+	var carousel			= jQuery('.shark_tm_testimonials .owl-carousel');
 	
 	var rtlMode	= false;
 
@@ -495,9 +495,9 @@ function foliox_tm_owl_carousel(){
 		nav: false,
 		navSpeed: false
 	});
-	foliox_tm_imgtosvg();
+	shark_tm_imgtosvg();
 	
-	var carousel2			= jQuery('.foliox_tm_partners .owl-carousel');
+	var carousel2			= jQuery('.shark_tm_partners .owl-carousel');
 
 	carousel2.owlCarousel({
 		loop: true,
@@ -522,7 +522,7 @@ function foliox_tm_owl_carousel(){
 // ----------------    PROGRESS LINE    ----------------
 // -----------------------------------------------------
 
-function foliox_tm_progress_line(){
+function shark_tm_progress_line(){
 	
 	"use strict";
 	
@@ -540,7 +540,7 @@ function foliox_tm_progress_line(){
 // -------------------    TOTOP    ---------------------
 // -----------------------------------------------------
 
-function foliox_tm_totop(){
+function shark_tm_totop(){
   
 	"use strict";
 	
@@ -564,11 +564,11 @@ jQuery('.anchor_nav').onePageNav();
 // -----------------    DOWN    ------------------------
 // -----------------------------------------------------
 
-function foliox_tm_down(){
+function shark_tm_down(){
 	
 	"use strict";
 	
-	var topbar	= jQuery('.foliox_tm_header').outerHeight();
+	var topbar	= jQuery('.shark_tm_header').outerHeight();
 	
 	jQuery('.anchor').on('click',function(){
 		
