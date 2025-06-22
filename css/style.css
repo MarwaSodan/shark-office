@@ -303,6 +303,11 @@ h6 {
 	height: auto;
 	clear: both;
 	float: left;
+
+
+	scroll-margin-top: 100px;
+
+
 }
 
 /*---------------------------------------------------*/
@@ -636,8 +641,9 @@ h6 {
 }
 
 .shark_tm_hero .right img {
-	max-width: 600px;
-	max-height: 600px;
+	max-width: 500px;
+	max-height: 500px;
+	border-radius: 50%;
 }
 
 .typewriter-text {
@@ -772,7 +778,8 @@ h6 {
 
 .shark_tm_about .big_image img {
 	width: 500px;
-	height: 470px;
+	height: 450px;
+	border-radius: 10px;
 }
 
 .shark_tm_about .small_image {
@@ -797,7 +804,7 @@ h6 {
 
 .shark_tm_about .small_image .main {
 	position: absolute;
-	top: 0px;
+	top: 20px;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
@@ -1357,6 +1364,7 @@ h6 {
 	left: -10%;
 	color: var(--extra-color);
 	z-index: 2;
+	border-radius: 50%;
 
 	-webkit-transition: all .3s ease;
 	-moz-transition: all .3s ease;
@@ -1370,8 +1378,9 @@ h6 {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 120px;
-	height: 120px;
+	width: 190px;
+	height: 190px;
+	border-radius: 50%;
 }
 
 .shark_tm_services .list ul li .title {
@@ -2124,8 +2133,8 @@ h6 {
 
 .shark_tm_testimonials .short .image {
 	position: relative;
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
 	border-radius: 100%;
 }
 
