@@ -804,9 +804,9 @@ h6 {
 
 .shark_tm_about .small_image .main {
 	position: absolute;
-	top: 20px;
+	top: 5%;
 	bottom: 0px;
-	left: 0px;
+	left: 5%;
 	right: 0px;
 	background-repeat: no-repeat;
 	background-size: cover;
