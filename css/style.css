@@ -2715,6 +2715,39 @@ input[type=number] {
 	padding: 0px 35px;
 }
 
+@media screen and (max-width: 768px) {
+	.foliox_tm_subscribe .inner {
+		flex-direction: column;
+		padding: 40px 20px;
+		text-align: center;
+	}
+
+	.foliox_tm_subscribe .left,
+	.foliox_tm_subscribe .right {
+		width: 100%;
+		padding: 0;
+	}
+
+	.foliox_tm_subscribe .field {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		position: static;
+		width: 100%;
+	}
+
+	.foliox_tm_subscribe .field input[type="text"] {
+		width: 100%;
+	}
+
+	.foliox_tm_subscribe .field input[type="submit"] {
+		position: static;
+		width: 100%;
+		border-radius: 12px;
+	}
+}
+
+
 /*---------------------------------------------------*/
 /*	17) Shark COPYRIGHT
 /*---------------------------------------------------*/
