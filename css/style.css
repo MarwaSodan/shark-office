@@ -102,19 +102,9 @@ body::-webkit-scrollbar-thumb {
 	border: 3px solid #1e1345;
 }
 
-/* .container {
-	max-width: 2000px;
-	width: 100%;
-	margin-inline: auto;
-	height: auto;
-	padding: 0px 20px !important;
-	position: relative;
-	clear: both;
-} */
 
 .container {
 	max-width: 1200px;
-	/* أو أي عرض مناسب لشاشتك */
 	width: 100%;
 	margin-inline: auto;
 	height: auto;
@@ -3587,10 +3577,4 @@ input[type=number] {
 	}
 
 
-}
-
-
-
-* {
-	outline: 1px solid red !important;
 }
