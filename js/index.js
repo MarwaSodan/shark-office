@@ -1,46 +1,50 @@
-
-const strings = [
-    "Flexible Office Spaces",
-    "Virtual Offices",
-    "Professional Meeting Rooms",
-    "Administrative Support Services"
-    // أو بدلهم جمل بالعربي لو حابة
-];
-
 let i = 0;
 let j = 0;
 let currentString = "";
 let isDeleting = false;
+let currentLang = localStorage.getItem("lang") || "en";
 
 function type() {
+    const strings = translations[currentLang].typewriter;
     const typewriter = document.getElementById("typewriter");
 
-    if (i < strings.length) {
-        currentString = strings[i];
+    if (!strings || strings.length === 0 || !typewriter) return;
 
-        if (isDeleting) {
-            typewriter.textContent = currentString.substring(0, j--);
-        } else {
-            typewriter.textContent = currentString.substring(0, j++);
-        }
+    currentString = strings[i];
 
-        if (!isDeleting && j === currentString.length + 1) {
-            isDeleting = true;
-            setTimeout(type, 1500); // انتظار قبل الحذف
-            return;
-        }
-
-        if (isDeleting && j === 0) {
-            isDeleting = false;
-            i = (i + 1) % strings.length;
-        }
-
-        setTimeout(type, isDeleting ? 50 : 100);
+    if (isDeleting) {
+        typewriter.textContent = currentString.substring(0, j--);
+    } else {
+        typewriter.textContent = currentString.substring(0, j++);
     }
+
+    if (!isDeleting && j === currentString.length + 1) {
+        isDeleting = true;
+        setTimeout(type, 1500); // انتظار قبل الحذف
+        return;
+    }
+
+    if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i + 1) % strings.length;
+    }
+
+    setTimeout(type, isDeleting ? 50 : 100);
 }
 
-document.addEventListener("DOMContentLoaded", type);
+// ✅ تشغيل التايب رايتر بناء على اللغة
+function startTypewriter(lang) {
+    currentLang = lang;
+    i = 0;
+    j = 0;
+    isDeleting = false;
+    type();
+}
 
+document.addEventListener("DOMContentLoaded", () => {
+    const lang = localStorage.getItem("lang") || "en";
+    startTypewriter(lang);
+});
 
 
 
