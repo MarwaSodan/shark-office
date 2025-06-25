@@ -161,6 +161,26 @@ const translations = {
 
         partner_tecrypts_name: "Tecrypts",
         partner_tecrypts_role: "أمن سيبراني – مدينة نصر",
+        contact: 'اتصل بنا ',
+        contact_title: "تواصل معنا",
+        contact_address_label: "العنوان",
+        contact_email_label: "البريد الإلكتروني",
+        contact_phone_label: "رقم الهاتف",
+        contact_form_name: "اسمك",
+        contact_form_email: "بريدك الإلكتروني",
+        contact_form_phone: "رقم هاتفك",
+        contact_form_subject: "الموضوع",
+        contact_form_message: "اكتب رسالتك هنا",
+        contact_form_submit: "إرسال الآن",
+
+        subscribe_subtitle: "ابقَ على تواصل",
+        subscribe_title: "هل لديك سؤال؟",
+        subscribe_text: "اترك بريدك الإلكتروني وسنقوم بالتواصل معك قريباً.",
+        subscribe_input: "أدخل بريدك الإلكتروني هنا",
+        subscribe_button: "أرسل الآن",
+
+        copyright_text: "تم التطوير بكل حب بواسطة INNO CODE © 2025",
+        to_top: "العودة للأعلى",
 
 
 
@@ -330,6 +350,28 @@ const translations = {
         partner_tecrypts_name: "Tecrypts",
         partner_tecrypts_role: "Cybersecurity – Nasr City",
 
+        contact:'Contact',
+
+        contact_title: "Let's Get in Touch",
+        contact_address_label: "Address",
+        contact_email_label: "Email",
+        contact_phone_label: "Phone",
+        contact_form_name: "Your Name",
+        contact_form_email: "Your Email",
+        contact_form_phone: "Your Phone",
+        contact_form_subject: "Subject",
+        contact_form_message: "Write your message here",
+        contact_form_submit: "Submit Now",
+
+        subscribe_subtitle: "Stay Connected",
+        subscribe_title: "Have a Question?",
+        subscribe_text: "Leave your email and we'll contact you soon.",
+        subscribe_input: "Your email here",
+        subscribe_button: "Send Now",
+
+        copyright_text: "Developed with love by INNO CODE © 2025",
+        to_top: "To Top",
+
 
 
 
@@ -337,11 +379,10 @@ const translations = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-    const $carousel = $(".owl-carousel");
+    const $carousel = $(".testimonials-carousel");
     const lang = localStorage.getItem("lang") || "en";
 
-    // ✅ ترجم الصفحة بالكامل (بما فيها العناصر الأصلية بتاعة الكاروسيل)
-    applyTranslations(lang);
+    applyTranslations(lang); // ✅ مهمة جداً هنا
 
     $carousel.owlCarousel({
         items: 1,
@@ -349,15 +390,14 @@ document.addEventListener("DOMContentLoaded", () => {
         nav: true,
         dots: true,
         onInitialized: function () {
-            const currentLang = localStorage.getItem("lang") || "en";
-            applyTranslations(currentLang);
+            applyTranslations(lang);
+            shark_tm_data_images();
         },
         onTranslated: function () {
-            const currentLang = localStorage.getItem("lang") || "en";
-            applyTranslations(currentLang);
+            applyTranslations(lang);
+            shark_tm_data_images();
         }
     });
-
 
     // ✅ أزرار تغيير اللغة
     document.getElementById("langToggleHeader").addEventListener("click", toggleLanguage);
@@ -367,13 +407,20 @@ document.addEventListener("DOMContentLoaded", () => {
 function applyTranslations(lang) {
     document.body.dir = lang === "ar" ? "rtl" : "ltr";
 
-    // ✅ ترجم كل العناصر اللي عندها data-translate
-    document.querySelectorAll("[data-translate]").forEach(el => {
+    const translatedElements = document.querySelectorAll("[data-translate]");
+
+    translatedElements.forEach(el => {
         const key = el.getAttribute("data-translate")?.trim();
-
-
         if (translations[lang] && translations[lang][key]) {
             el.textContent = translations[lang][key];
+        }
+    });
+
+    // ✅ ترجم العناصر المنسوخة جوه الكاروسيل
+    document.querySelectorAll(".owl-item.cloned [data-translate]").forEach(clonedEl => {
+        const key = clonedEl.getAttribute("data-translate")?.trim();
+        if (translations[lang] && translations[lang][key]) {
+            clonedEl.textContent = translations[lang][key];
         }
     });
 
@@ -382,11 +429,29 @@ function applyTranslations(lang) {
         span.innerText = lang === "ar" ? "EN" : "AR";
     });
 
-    // ✅ التايب رايتر
     if (typeof startTypewriter === "function") {
         startTypewriter(lang);
     }
+
+    // ✅ ترجمة placeholders
+    document.querySelectorAll("[data-translate-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-translate-placeholder");
+        if (translations[lang] && translations[lang][key]) {
+            el.placeholder = translations[lang][key];
+        }
+    });
+
+    // ✅ ترجمة قيمة زر الإرسال
+    document.querySelectorAll("[data-translate-value]").forEach(el => {
+        const key = el.getAttribute("data-translate-value");
+        if (translations[lang] && translations[lang][key]) {
+            el.value = translations[lang][key];
+        }
+    });
+
 }
+
+
 
 function toggleLanguage() {
     const currentLang = localStorage.getItem("lang") || "en";
@@ -394,11 +459,20 @@ function toggleLanguage() {
     localStorage.setItem("lang", newLang);
 
     applyTranslations(newLang);
+    // shark_tm_data_images(); 
 
-    const $carousel = $(".owl-carousel");
+    const $carousel = $(".testimonials-carousel");
+
     if ($carousel.length && $carousel.data("owl.carousel")) {
         $carousel.trigger("refresh.owl.carousel");
     }
+
+    // ✅ إعادة الترجمة بعد وقت بسيط لضمان ظهور النصوص داخل العناصر المنسوخة (cloned)
+    setTimeout(() => {
+        applyTranslations(newLang);
+    }, 500);
+    
+    location.reload(); // ⬅️ reload الصفحة بالكامل
 
 }
 

@@ -8,6 +8,7 @@
 
 	<meta name="description" content="Shark | Office">
 	<meta name="author" content="Marketify">
+	<link rel="icon" type="image/x-icon" href="img/logo/logoShark.png">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -20,10 +21,10 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
 		rel="stylesheet">
-
-	<!-- CSS (حطيه في <head>) -->
 	<link rel="stylesheet"
 		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
 	<link rel="stylesheet" type="text/css" href="css/plugins.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -191,7 +192,6 @@
 							<li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">
 								<div class="list_inner tilt-effect">
 									<i class="fas fa-handshake fa-3x"></i>
-									<h3 class="title">Admin Support</h3>
 									<h3 class="title" data-translate="feature_admin">Admin Support</h3>
 								</div>
 							</li>
@@ -752,9 +752,6 @@
 		</div>
 		<!-- /explore -->
 
-
-
-
 		<!-- TESTIMONIALS -->
 		<div class="shark_tm_section" id="testimonials">
 			<div class="shark_tm_testimonials">
@@ -765,11 +762,11 @@
 					</div>
 					<div class="list_wrapper">
 						<div class="total">
-							<div class="in wow fadeInUp" data-wow-duration="1s">
-								<ul class="owl-carousel owl-theme">
+							<div class="in">
+								<div class="owl-carousel testimonials-carousel owl-theme">
 
 									<!-- Inno Code -->
-									<li>
+									<div class="item">
 										<div class="icon">
 											<img class="svg" src="img/svg/quote.svg" alt="quote icon" />
 										</div>
@@ -781,7 +778,9 @@
 										</div>
 										<div class="short">
 											<div class="image">
-												<div class="main" data-img-url="img/testimonials/inno-code.jpeg"></div>
+												<div class="main"
+													style="background-image: url('img/testimonials/inno-code.jpeg');">
+												</div>
 											</div>
 											<div class="detail">
 												<h3 data-translate="partner_inno_name">Inno Code</h3>
@@ -789,10 +788,10 @@
 													City</span>
 											</div>
 										</div>
-									</li>
+									</div>
 
 									<!-- El Shams Company -->
-									<li>
+									<div class="item">
 										<div class="icon">
 											<img class="svg" src="img/svg/quote.svg" alt="quote icon" />
 										</div>
@@ -804,7 +803,9 @@
 										</div>
 										<div class="short">
 											<div class="image">
-												<div class="main" data-img-url="img/testimonials/el-shams.jpeg"></div>
+												<div class="main"
+													style="background-image: url('img/testimonials/el-shams.jpeg');">
+												</div>
 											</div>
 											<div class="detail">
 												<h3 data-translate="partner_shams_name">El Shams Company</h3>
@@ -812,10 +813,10 @@
 													Cairo</span>
 											</div>
 										</div>
-									</li>
+									</div>
 
 									<!-- Summit Real Group -->
-									<li>
+									<div class="item">
 										<div class="icon">
 											<img class="svg" src="img/svg/quote.svg" alt="quote icon" />
 										</div>
@@ -826,17 +827,19 @@
 										</div>
 										<div class="short">
 											<div class="image">
-												<div class="main" data-img-url="img/testimonials/summit.jpeg"></div>
+												<div class="main"
+													style="background-image: url('img/testimonials/summit.jpeg');">
+												</div>
 											</div>
 											<div class="detail">
 												<h3 data-translate="partner_summit_name">Summit Real Group</h3>
 												<span data-translate="partner_summit_role">Real Estate Partner</span>
 											</div>
 										</div>
-									</li>
+									</div>
 
-									<!-- Flamingo Digital Solutions -->
-									<li>
+									<!-- Flamingo -->
+									<div class="item">
 										<div class="icon">
 											<img class="svg" src="img/svg/quote.svg" alt="quote icon" />
 										</div>
@@ -847,7 +850,9 @@
 										</div>
 										<div class="short">
 											<div class="image">
-												<div class="main" data-img-url="img/testimonials/flamingo.jpeg"></div>
+												<div class="main"
+													style="background-image: url('img/testimonials/flamingo.jpeg');">
+												</div>
 											</div>
 											<div class="detail">
 												<h3 data-translate="partner_flamingo_name">Flamingo Digital Solutions
@@ -856,21 +861,23 @@
 													Cairo</span>
 											</div>
 										</div>
-									</li>
+									</div>
 
 									<!-- Tecrypts -->
-									<li>
+									<div class="item">
 										<div class="icon">
 											<img class="svg" src="img/svg/quote.svg" alt="quote icon" />
 										</div>
 										<div class="text">
 											<p data-translate="testimonial_tecrypts">
-												The level of privacy and professionalism at Shark is outstanding...
+												The level of privacy and professionadivsm at Shark is outstanding...
 											</p>
 										</div>
 										<div class="short">
 											<div class="image">
-												<div class="main" data-img-url="img/testimonials/tecrypts.jpeg"></div>
+												<div class="main"
+													style="background-image: url('img/testimonials/tecrypts.jpeg');">
+												</div>
 											</div>
 											<div class="detail">
 												<h3 data-translate="partner_tecrypts_name">Tecrypts</h3>
@@ -878,9 +885,9 @@
 													City</span>
 											</div>
 										</div>
-									</li>
+									</div>
 
-								</ul>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -890,12 +897,14 @@
 		<!-- /TESTIMONIALS -->
 
 
+
 		<!-- PARTNERS -->
 		<div class="shark_tm_section">
 			<div class="shark_tm_partners">
 				<div class="container">
 					<div class="partners_list tilt-effect wow fadeInUp" data-wow-duration="1s">
-						<ul class="owl-carousel">
+						<ul class="owl-carousel partners-carousel">
+
 							<li class="item">
 								<img src="img/partners/el-shams.png" alt="el-shams" />
 							</li>
@@ -1025,8 +1034,8 @@
 			<div class="shark_tm_contact">
 				<div class="container">
 					<div class="shark_tm_main_title">
-						<span>Contact</span>
-						<h3>Let's Get in Touch</h3>
+						<span data-translate="contact">Contact</span>
+						<h3 data-translate="contact_title">Let's Get in Touch</h3>
 					</div>
 					<div class="contact_inner">
 						<!-- Left: Contact Info -->
@@ -1038,8 +1047,9 @@
 											<i class="icon-location"></i>
 										</div>
 										<div class="short">
-											<h3>Address</h3>
-											<span>129 Uthman ibn Affan, Heliopolis</span>
+											<h3 data-translate="contact_address_label">Address</h3>
+											<span data-translate="label_address_value">129 Uthman ibn Affan,
+												Heliopolis</span>
 										</div>
 									</div>
 								</li>
@@ -1049,9 +1059,9 @@
 											<i class="icon-mail-1"></i>
 										</div>
 										<div class="short">
-											<h3>Email</h3>
+											<h3 data-translate="contact_email_label">Email</h3>
 											<span><a
-													href="mailto:sharek.office@gmail.com">officeshark93@gmail.com</a></span>
+													href="mailto:officeshark93@gmail.com">officeshark93@gmail.com</a></span>
 										</div>
 									</div>
 								</li>
@@ -1061,8 +1071,8 @@
 											<i class="icon-phone"></i>
 										</div>
 										<div class="short">
-											<h3>Phone</h3>
-											<span><a href="tel:+201234567890">+20 15 53398909</a></span>
+											<h3 data-translate="contact_phone_label">Phone</h3>
+											<span><a href="tel:+201553398909">+20 15 53398909</a></span>
 										</div>
 									</div>
 								</li>
@@ -1079,17 +1089,23 @@
 									<div class="empty_notice"><span>Please Fill Required Fields</span></div>
 									<div class="input_list">
 										<ul>
-											<li><input id="name" type="text" placeholder="Your Name" /></li>
-											<li><input id="email" type="text" placeholder="Your Email" /></li>
-											<li><input id="phone" type="number" placeholder="Your Phone" /></li>
-											<li><input id="subject" type="text" placeholder="Subject" /></li>
+											<li><input id="name" type="text"
+													data-translate-placeholder="contact_form_name" /></li>
+											<li><input id="email" type="text"
+													data-translate-placeholder="contact_form_email" /></li>
+											<li><input id="phone" type="number"
+													data-translate-placeholder="contact_form_phone" /></li>
+											<li><input id="subject" type="text"
+													data-translate-placeholder="contact_form_subject" /></li>
 										</ul>
 									</div>
 									<div class="message_area">
-										<textarea id="message" placeholder="Write your message here"></textarea>
+										<textarea id="message"
+											data-translate-placeholder="contact_form_message"></textarea>
 									</div>
 									<div class="shark_tm_button">
-										<a id="send_message" href="#"><span>Submit Now</span></a>
+										<a id="send_message" href="#"><span data-translate="contact_form_submit">Submit
+												Now</span></a>
 									</div>
 								</form>
 							</div>
@@ -1108,15 +1124,15 @@
 				<div class="container">
 					<div class="inner tilt-effect">
 						<div class="left wow fadeInLeft" data-wow-duration="1s">
-							<span class="subtitle">Stay Connected</span>
-							<h3 class="title">Have a Question?</h3>
-							<p class="text">Leave your email and we'll contact you soon.</p>
-
+							<span class="subtitle" data-translate="subscribe_subtitle">Stay Connected</span>
+							<h3 class="title" data-translate="subscribe_title">Have a Question?</h3>
+							<p class="text" data-translate="subscribe_text">Leave your email and we'll contact you soon.
+							</p>
 						</div>
 						<div class="right wow fadeInRight" data-wow-duration="1s">
 							<div class="field">
-								<input type="text" placeholder="Your email here">
-								<input type="submit" value="Send Now" />
+								<input type="text" data-translate-placeholder="subscribe_input" />
+								<input type="submit" value="Send Now" data-translate-value="subscribe_button" />
 							</div>
 						</div>
 					</div>
@@ -1129,9 +1145,10 @@
 		<div class="shark_tm_section">
 			<div class="shark_tm_copyright">
 				<div class="container">
-					<p class="wow fadeInUp" data-wow-duration="1s">Developed with love by <a
-							href="https://www.facebook.com/share/175eMAP6HK/" target="_blank">INNO CODE</a> &copy;
-						2025</p>
+					<p class="wow fadeInUp" data-wow-duration="1s" data-translate="copyright_text">
+						Developed with love by <a href="https://www.facebook.com/share/175eMAP6HK/" target="_blank">INNO
+							CODE</a> &copy; 2025
+					</p>
 				</div>
 			</div>
 		</div>
@@ -1144,7 +1161,7 @@
 
 		<!-- TOTOP -->
 		<div class="progressbar">
-			<a href="#"><span class="text">To Top</span></a>
+			<a href="#"><span class="text" data-translate="to_top">To Top</span></a>
 			<span class="line"></span>
 		</div>
 		<!-- /TOTOP -->
@@ -1153,33 +1170,40 @@
 	<!-- / WRAPPER ALL -->
 
 	<!-- SCRIPTS -->
-	<!-- jQuery أولاً -->
-<script src="js/jquery.min.js"></script>
 
-<!-- بعده Owl Carousel -->
-<script src="js/owl.carousel.min.js"></script>
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-	<!-- باقي ملفاتك -->
-	<script src="js/translation.js"></script>
-
+	<!-- Owl Carousel CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 
 	<script>
-		// نمنع أي scroll تلقائي يحصل من أي سكريبت خارجي
 		window.scrollTo = function () { };
 	</script>
-
-	<script src="js/jquery.js"></script>
-	<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->
 	<script src="js/plugins.js"></script>
+	<script src="js/translation.js"></script>
+
 	<script src="js/init.js"></script>
-
-
-
-	<!-- /SCRIPTS -->
 	<script src="js/index.js"></script>
-
-
+	<script>
+		jQuery(window).on('load', function () {
+			console.log("✅ الصفحة اتحملت");
+			if ($('.testimonials-carousel').length > 0) {
+				console.log("✅ الكاروسيل موجود");
+				$('.testimonials-carousel').owlCarousel({
+					loop: true,
+					items: 1,
+					dots: true,
+					nav: false,
+					autoplay: true,
+					autoplayTimeout: 4000
+				});
+			} else {
+				console.log("❌ الكاروسيل مش موجود في الصفحة");
+			}
+		});
+	</script>
 
 
 

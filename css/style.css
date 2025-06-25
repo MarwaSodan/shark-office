@@ -2077,6 +2077,12 @@ h6 {
 	clear: both;
 	float: left;
 	margin-bottom: 170px;
+	position: relative;
+	z-index: 111111111111111111;
+	  min-height: 300px;
+  background: rgba(255, 0, 0, 0.1);
+  z-index: 9999;
+  position: relative;
 }
 
 .shark_tm_testimonials .list_wrapper {
@@ -2086,6 +2092,7 @@ h6 {
 	float: left;
 	position: relative;
 	margin-top: 50px;
+	/* z-index: 1000000000; */
 }
 
 .shark_tm_testimonials .in {
@@ -2212,6 +2219,82 @@ h6 {
 	right: -5px;
 	margin-top: 64px;
 }
+
+
+
+
+
+.testimonials-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.testimonial-card {
+	background: #fff;
+	padding: 20px;
+	border-radius: 12px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+	transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-card .icon img {
+	width: 30px;
+	margin-bottom: 10px;
+}
+
+.testimonial-card .text {
+	margin-bottom: 15px;
+}
+
+.testimonial-card .image .main {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-size: cover;
+	background-position: center;
+}
+
+.testimonial-card .short {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.testimonial-card .detail h3 {
+	margin: 0;
+	font-size: 16px;
+}
+
+.testimonial-card .detail span {
+	font-size: 14px;
+	color: #888;
+}
+.testimonials-carousel .item {
+  min-height: 200px;
+  background: red;
+}
+
+.testimonials-carousel {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.testimonials-carousel .item {
+  background: lightblue !important;
+  min-height: 200px;
+  color: black;
+}
+
 
 /*---------------------------------------------------*/
 /*	13) SHARK PARTNERS
@@ -3596,3 +3679,230 @@ input[type=number] {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================ */
+/* RTL Support for AR language */
+/* ============================ */
+body[dir="rtl"] .shark_tm_header .inner,
+body[dir="rtl"] .shark_tm_header .details,
+body[dir="rtl"] .shark_tm_header .menu ul,
+body[dir="rtl"] .shark_tm_header .social ul,
+body[dir="rtl"] .shark_tm_mobile_menu .mobile_in {
+	flex-direction: row-reverse;
+}
+
+body[dir="rtl"] .shark_tm_header .menu ul li {
+	margin: 0 0 0 40px; /* انعكاس المارجن */
+}
+
+body[dir="rtl"] .shark_tm_header .menu ul li:last-child {
+	margin-left: 0;
+}
+
+body[dir="rtl"] .shark_tm_header .social {
+	margin-right: 60px;
+	margin-left: 0;
+}
+
+body[dir="rtl"] .shark_tm_header .social:before {
+	content: "|";
+	right: -30px;
+	left: auto;
+	top: -2px;
+	position: absolute;
+}
+
+body[dir="rtl"] .shark_tm_mobile_menu .dropdown .dropdown_inner ul li {
+	text-align: right;
+}
+
+/* زر تغيير اللغة في RTL */
+body[dir="rtl"] .language-switcher {
+	margin-right: 20px;
+	margin-left: 0;
+}
+
+/* تعديل بسيط للـقائمة */
+body[dir="rtl"] .shark_tm_mobile_menu .dropdown .dropdown_inner ul li a {
+	text-align: right;
+	display: block;
+}
+
+
+
+
+/* ✅ RTL Support */
+body[dir="rtl"] .shark_tm_hero .content {
+	flex-direction: row-reverse;
+	text-align: right;
+}
+
+body[dir="rtl"] .shark_tm_hero .right {
+	padding-left: 0;
+	padding-right: 80px;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 991px) {
+	.shark_tm_hero .content {
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		margin-top: 0;
+		gap: 2rem;
+	}
+
+	.shark_tm_hero .left,
+	.shark_tm_hero .right {
+		width: 100%;
+		padding: 0;
+	}
+
+	body[dir="rtl"] .shark_tm_hero .right {
+		padding-right: 0;
+	}
+
+	.shark_tm_hero .name {
+		font-size: 48px;
+	}
+
+	.shark_tm_hero .job {
+		font-size: 18px;
+	}
+
+	.shark_tm_button a {
+		padding: 14px 30px;
+		font-size: 15px;
+	}
+
+	.shark_tm_hero .right img {
+		max-width: 280px;
+		max-height: 280px;
+		margin: 0 auto;
+	}
+}
+
+
+
+/* ✅ RTL adjustments */
+body[dir="rtl"] .shark_tm_features .list ul {
+	margin: 0px -25px 0px 0px; /* عكس الاتجاه */
+}
+
+body[dir="rtl"] .shark_tm_features .list ul li {
+	padding-left: 0;
+	padding-right: 25px;
+}
+
+/* ✅ Responsive styles */
+@media (max-width: 991px) {
+	.shark_tm_features .list ul li {
+		width: 50%; /* عنصرين في الصف */
+	}
+
+	.shark_tm_features .list ul li .list_inner {
+		padding: 40px 30px;
+	}
+}
+
+@media (max-width: 576px) {
+	.shark_tm_features .list ul li {
+		width: 100%; /* عنصر واحد في الصف */
+	}
+
+	.shark_tm_features .list ul {
+		margin: 0; /* شيل المارجن تمامًا */
+	}
+
+	body[dir="rtl"] .shark_tm_features .list ul {
+		margin: 0; /* شيل المارجن كمان في RTL */
+	}
+
+	.shark_tm_features .list ul li {
+		padding: 0 0 40px;
+	}
+}
+
+
+
+/* ✅ RTL adjustments */
+body[dir="rtl"] .shark_tm_about .right {
+	padding-left: 0;
+	padding-right: 40px;
+	text-align: right;
+}
+
+body[dir="rtl"] .shark_tm_about .experience .inner {
+	padding-left: 0;
+	padding-right: 25px;
+	flex-direction: row-reverse;
+}
+
+body[dir="rtl"] .shark_tm_about .experience .inner:before {
+	left: auto;
+	right: 0;
+}
+
+body[dir="rtl"] .shark_tm_about .experience .inner span {
+	padding-left: 0;
+	padding-right: 20px;
+}
+
+body[dir="rtl"] .shark_tm_about .small_image {
+	right: auto;
+	left: 100%;
+	margin-right: 0;
+	margin-left: -100px;
+}
+
+body[dir="rtl"] .shark_tm_about .badge {
+	right: auto;
+	left: 100%;
+	margin-right: 0;
+	margin-left: 45px;
+}
+
+/* ✅ Responsive RTL (شاشات صغيرة) */
+@media (max-width: 991px) {
+	body[dir="rtl"] .shark_tm_about .right {
+		padding-right: 0;
+		text-align: center;
+	}
+
+	body[dir="rtl"] .shark_tm_about .small_image,
+	body[dir="rtl"] .shark_tm_about .badge,
+	body[dir="rtl"] .shark_tm_about .experience {
+		left: auto;
+		right: auto;
+		margin: 20px auto 0;
+		text-align: center;
+	}
+
+	body[dir="rtl"] .shark_tm_about .experience .inner {
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	body[dir="rtl"] .shark_tm_about .experience .inner:before {
+		display: none;
+	}
+}
+
+
