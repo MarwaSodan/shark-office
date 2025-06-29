@@ -18,7 +18,6 @@ jQuery(document).ready(function () {
 
 	shark_tm_modalbox();
 	shark_tm_nav_bg();
-	shark_tm_trigger_menu();
 	shark_tm_modalbox_news();
 	shark_tm_modalbox_portfolio();
 	shark_tm_portfolio();
@@ -82,37 +81,7 @@ function shark_tm_nav_bg() {
 	});
 }
 
-// -----------------------------------------------------
-// ---------------   TRIGGER MENU    -------------------
-// -----------------------------------------------------
 
-function shark_tm_trigger_menu() {
-
-	"use strict";
-
-	var hamburger = jQuery('.trigger .hamburger');
-	var mobileMenu = jQuery('.shark_tm_mobile_menu .dropdown');
-	var mobileMenuList = jQuery('.shark_tm_mobile_menu .dropdown .dropdown_inner ul li a');
-
-	hamburger.on('click', function () {
-		var element = jQuery(this);
-
-		if (element.hasClass('is-active')) {
-			element.removeClass('is-active');
-			mobileMenu.slideUp();
-		} else {
-			element.addClass('is-active');
-			mobileMenu.slideDown();
-		}
-		return false;
-	});
-
-	mobileMenuList.on('click', function () {
-		jQuery('.trigger .hamburger').removeClass('is-active');
-		mobileMenu.slideUp();
-		return false;
-	});
-}
 
 // -------------------------------------------------
 // -------------  MODALBOX NEWS  -------------------
@@ -258,7 +227,6 @@ function progress_by_frenify(wrapper) {
 // -----------------------------------------------------
 
 function shark_tm_preloader() {
-
 	"use strict";
 
 	var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
@@ -266,16 +234,17 @@ function shark_tm_preloader() {
 
 	if (!isMobile) {
 		setTimeout(function () {
-			preloader.addClass('preloaded');
+			$('body').addClass('loaded'); // ✅ الكلاس الصحيح
 		}, 800);
 		setTimeout(function () {
 			preloader.remove();
 		}, 2000);
-
 	} else {
+		$('body').addClass('loaded'); // ✅ مهم كمان في حالة الموبايل
 		preloader.remove();
 	}
 }
+
 
 // -----------------------------------------------------
 // -------------------    COUNTER    -------------------
@@ -305,13 +274,18 @@ jQuery('.tm_counter').each(function () {
 // -----------------   MY LOAD    ----------------------
 // -----------------------------------------------------
 
-function shark_tm_my_load() {
+console.log("Load started");
 
+function shark_tm_my_load() {
 	"use strict";
 
 	var speed = 500;
-	setTimeout(function () { shark_tm_preloader(); }, speed);
+	setTimeout(function () {
+		console.log("Calling preloader...");
+		shark_tm_preloader();
+	}, speed);
 }
+
 
 // -----------------------------------------------------
 // ------------------   CURSOR    ----------------------
@@ -600,33 +574,6 @@ if (jQuery('.tilt-effect').length) {
 		transition: true
 	});
 }
-document.getElementById("langToggleHeader").addEventListener("click", function () {
-	const oldLang = localStorage.getItem("lang") || "en";
-	const newLang = oldLang === "en" ? "ar" : "en";
-	localStorage.setItem("lang", newLang);
-	applyTranslations(newLang);
-	document.body.setAttribute("dir", newLang === "ar" ? "rtl" : "ltr");
-});
-
-document.getElementById("langToggleMobile").addEventListener("click", function () {
-	const oldLang = localStorage.getItem("lang") || "en";
-	const newLang = oldLang === "en" ? "ar" : "en";
-	localStorage.setItem("lang", newLang);
-	applyTranslations(newLang);
-	document.body.setAttribute("dir", newLang === "ar" ? "rtl" : "ltr");
-});
 
 
-// ✅ عشان زر اللغة يشتغل في أي وقت وأي مكان
-document.addEventListener("click", function (e) {
-    if (e.target.classList.contains("langLabel")) {
-        toggleLanguage();
-    }
-});
 
-
-// 2. لما الصفحة تفتح لأول مرة طبق الترجمة حسب اللغة المخزنة
-document.addEventListener("DOMContentLoaded", function () {
-    const lang = localStorage.getItem("lang") || "en";
-    applyTranslations(lang); // دي مهمة جدًا
-});

@@ -8,7 +8,7 @@
 
 	<meta name="description" content="Shark | Office">
 	<meta name="author" content="Marketify">
-	<link rel="icon" type="image/x-icon" href="img/logo/logoShark.png">
+	<link rel="icon" type="image/x-icon" href="img/logo/sharkLogo.png">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -44,43 +44,35 @@
 
 	<!-- WRAPPER ALL -->
 	<div class="shark_tm_all_wrap" data-magic-cursor="show">
-
-		<!-- MOBILE MENU -->
-		<div class="shark_tm_mobile_menu">
-			<div class="mobile_menu_inner">
-				<div class="mobile_in">
+		<header class="shark_tm_mobile_nav">
+			<div class="container">
+				<div class="mobile_nav_inner">
 					<div class="logo">
-						<a href="#"><img src="img/logo/logoShark.png" alt="" /></a>
+						<a href="#home">
+							<img src="img/logo/logoShark.png" alt="Shark Logo" />
+						</a>
 					</div>
-					<div class="trigger">
-						<div class="hamburger hamburger--slider">
-							<div class="hamburger-box">
-								<div class="hamburger-inner"></div>
-							</div>
-						</div>
-					</div>
+					<button class="menu-toggle" id="mobileMenuToggle">
+						<span></span><span></span><span></span>
+					</button>
 				</div>
-			</div>
-			<div class="dropdown">
-				<div class="dropdown_inner">
+				<nav class="mobile_nav_links" id="mobileNavLinks">
 					<ul class="anchor_nav">
-						<li class="current"><a href="#home" data-translate="home">Home</a></li>
+						<li><a href="#home" data-translate="home">Home</a></li>
 						<li><a href="#about" data-translate="about">About</a></li>
 						<li><a href="#service" data-translate="service">Service</a></li>
 						<li><a href="#explore" data-translate="explore">Explore</a></li>
 						<li><a href="#contact" data-translate="contact">Contact</a></li>
+						<li>
+							<button id="langToggleMobile"
+								style="background:none;border:none;color:white;font-size:16px;margin-top:10px;">
+								<i class="fas fa-globe"></i> <span class="langLabel">AR</span>
+							</button>
+						</li>
 					</ul>
-					<div class="language-switcher" style="margin-left: 20px;">
-						<button id="langToggleMobile" title="Toggle Language"
-							style="background: none; border: none; font-size: 18px; cursor: pointer; color: aliceblue;">
-							<i class="fas fa-globe"></i> <span class="langLabel">AR</span>
-						</button>
-					</div>
-				</div>
+				</nav>
 			</div>
-		</div>
-		<!-- /MOBILE MENU -->
-
+		</header>
 		<!-- HEADER -->
 		<div class="shark_tm_header">
 			<div class="container">
@@ -94,8 +86,10 @@
 								<li class="current"><a href="#home" data-translate="home">Home</a></li>
 								<li><a href="#about" data-translate="about">About</a></li>
 								<li><a href="#service" data-translate="service">Service</a></li>
-								<li><a href="#explore" data-translate="explore">Explore</a></li>
-								<li><a href="#contact" data-translate="contact">Contact</a></li>
+								<li><a href="#explore" class="nav-item-explore" data-translate="explore">Explore</a>
+								</li>
+								<li class="nav-space-before"><a href="#contact" data-translate="contact">Contact</a>
+								</li>
 							</ul>
 						</div>
 						<div class="social">
@@ -141,7 +135,7 @@
 							</p>
 
 							<!-- ✅ عنصر الـ Typewriter -->
-							<p class="typewriter-text" id="typewriter"></p>
+							<p class="typewriter-text" id="typewriter" data-translate="typewriter"></p>
 
 							<div class="shark_tm_button">
 								<a class="anchor" href="#contact">
@@ -168,7 +162,8 @@
 							<li class="wow fadeInUp" data-wow-duration="1s">
 								<div class="list_inner tilt-effect">
 									<i class="fas fa-house-laptop fa-3x"></i>
-									<h3 class="title" data-translate="feature_offices">Fully-Equipped <br> Offices</h3>
+									<h3 class="title" data-translate="feature_offices">Fully-Equipped <br> Offices
+									</h3>
 								</div>
 							</li>
 							<li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
@@ -245,7 +240,8 @@
 						<div class="right">
 							<h3 class="title" data-translate="about_us_title">About Us</h3>
 							<p class="text" data-translate="about_us_text">
-								Shark is a growing company based in Heliopolis, Egypt. We provide fully-equipped office
+								Shark is a growing company based in Heliopolis, Egypt. We provide fully-equipped
+								office
 								spaces, virtual offices, and administrative services to support startups and
 								entrepreneurs. Our goal is to offer a professional environment that drives business
 								growth — with plans to expand across Egypt soon.
@@ -283,7 +279,8 @@
 											</li>
 											<li>
 												<span data-translate="label_address">Address</span>
-												<p data-translate="label_address_value">129 Uthman ibn Affan, Heliopolis
+												<p data-translate="label_address_value">129 Uthman ibn Affan,
+													Heliopolis
 												</p>
 											</li>
 
@@ -372,7 +369,8 @@
 								</div>
 								<div class="progress_inner" data-value="95">
 									<span>
-										<span class="label" data-translate="choose_admin">Admin Support Services</span>
+										<span class="label" data-translate="choose_admin">Admin Support
+											Services</span>
 										<span class="number">95%</span>
 									</span>
 									<div class="background">
@@ -383,7 +381,8 @@
 								</div>
 								<div class="progress_inner" data-value="90">
 									<span>
-										<span class="label" data-translate="choose_internet">High-Speed Internet</span>
+										<span class="label" data-translate="choose_internet">High-Speed
+											Internet</span>
 										<span class="number">90%</span>
 									</span>
 									<div class="background">
@@ -398,7 +397,8 @@
 							<div class="dodo_progress wow fadeInUp" data-wow-duration="1s">
 								<div class="progress_inner" data-value="85">
 									<span>
-										<span class="label" data-translate="choose_meeting">Meeting Room Services</span>
+										<span class="label" data-translate="choose_meeting">Meeting Room
+											Services</span>
 										<span class="number">85%</span>
 									</span>
 									<div class="background">
@@ -508,12 +508,14 @@
 										<div class="list_inner">
 											<span class="icon"><i class="fa-solid fa-handshake"></i></span>
 											<div class="resume_title">
-												<h3 data-translate="value_client_partnership">Client Partnership</h3>
+												<h3 data-translate="value_client_partnership">Client Partnership
+												</h3>
 												<span class="company" data-translate="value_client_sub">We grow
 													together</span>
 											</div>
 											<p class="text" data-translate="value_client_desc">
-												We believe in long-term collaboration with our clients based on trust
+												We believe in long-term collaboration with our clients based on
+												trust
 												and respect.
 											</p>
 										</div>
@@ -527,7 +529,8 @@
 													your time</span>
 											</div>
 											<p class="text" data-translate="value_timeliness_desc">
-												Every project is delivered with respect to deadlines and expectations.
+												Every project is delivered with respect to deadlines and
+												expectations.
 											</p>
 										</div>
 									</li>
@@ -549,7 +552,8 @@
 													ideas</span>
 											</div>
 											<p class="text" data-translate="value_innovation_desc">
-												We constantly seek new ways to bring creativity and efficiency to our
+												We constantly seek new ways to bring creativity and efficiency to
+												our
 												work.
 											</p>
 										</div>
@@ -590,9 +594,11 @@
 					<div class="portfolio_filter">
 						<ul>
 							<li><a href="#" data-translate="filter_all" class="current" data-filter="*">All</a></li>
-							<li><a href="#" data-translate="filter_private" data-filter=".private">Private Offices</a>
+							<li><a href="#" data-translate="filter_private" data-filter=".private">Private
+									Offices</a>
 							</li>
-							<li><a href="#" data-translate="filter_virtual" data-filter=".virtual">Virtual Offices</a>
+							<li><a href="#" data-translate="filter_virtual" data-filter=".virtual">Virtual
+									Offices</a>
 							</li>
 							<li><a href="#" data-translate="filter_meeting" data-filter=".meeting">Meeting Rooms</a>
 							</li>
@@ -763,130 +769,9 @@
 					<div class="list_wrapper">
 						<div class="total">
 							<div class="in">
-								<div class="owl-carousel testimonials-carousel owl-theme">
-
-									<!-- Inno Code -->
-									<div class="item">
-										<div class="icon">
-											<img class="svg" src="img/svg/quote.svg" alt="quote icon" />
-										</div>
-										<div class="text">
-											<p data-translate="testimonial_inno">
-												The quiet and focused environment at Shark has been ideal for our
-												development team...
-											</p>
-										</div>
-										<div class="short">
-											<div class="image">
-												<div class="main"
-													style="background-image: url('img/testimonials/inno-code.jpeg');">
-												</div>
-											</div>
-											<div class="detail">
-												<h3 data-translate="partner_inno_name">Inno Code</h3>
-												<span data-translate="partner_inno_role">Software Company – Nasr
-													City</span>
-											</div>
-										</div>
-									</div>
-
-									<!-- El Shams Company -->
-									<div class="item">
-										<div class="icon">
-											<img class="svg" src="img/svg/quote.svg" alt="quote icon" />
-										</div>
-										<div class="text">
-											<p data-translate="testimonial_shams">
-												As a construction and finishing company, we needed a well-organized
-												location...
-											</p>
-										</div>
-										<div class="short">
-											<div class="image">
-												<div class="main"
-													style="background-image: url('img/testimonials/el-shams.jpeg');">
-												</div>
-											</div>
-											<div class="detail">
-												<h3 data-translate="partner_shams_name">El Shams Company</h3>
-												<span data-translate="partner_shams_role">Finishing & Construction –
-													Cairo</span>
-											</div>
-										</div>
-									</div>
-
-									<!-- Summit Real Group -->
-									<div class="item">
-										<div class="icon">
-											<img class="svg" src="img/svg/quote.svg" alt="quote icon" />
-										</div>
-										<div class="text">
-											<p data-translate="testimonial_summit">
-												The space is highly organized and the service is top-notch...
-											</p>
-										</div>
-										<div class="short">
-											<div class="image">
-												<div class="main"
-													style="background-image: url('img/testimonials/summit.jpeg');">
-												</div>
-											</div>
-											<div class="detail">
-												<h3 data-translate="partner_summit_name">Summit Real Group</h3>
-												<span data-translate="partner_summit_role">Real Estate Partner</span>
-											</div>
-										</div>
-									</div>
-
-									<!-- Flamingo -->
-									<div class="item">
-										<div class="icon">
-											<img class="svg" src="img/svg/quote.svg" alt="quote icon" />
-										</div>
-										<div class="text">
-											<p data-translate="testimonial_flamingo">
-												As a media agency, we care about how the place looks and feels...
-											</p>
-										</div>
-										<div class="short">
-											<div class="image">
-												<div class="main"
-													style="background-image: url('img/testimonials/flamingo.jpeg');">
-												</div>
-											</div>
-											<div class="detail">
-												<h3 data-translate="partner_flamingo_name">Flamingo Digital Solutions
-												</h3>
-												<span data-translate="partner_flamingo_role">Media Agency – New
-													Cairo</span>
-											</div>
-										</div>
-									</div>
-
-									<!-- Tecrypts -->
-									<div class="item">
-										<div class="icon">
-											<img class="svg" src="img/svg/quote.svg" alt="quote icon" />
-										</div>
-										<div class="text">
-											<p data-translate="testimonial_tecrypts">
-												The level of privacy and professionadivsm at Shark is outstanding...
-											</p>
-										</div>
-										<div class="short">
-											<div class="image">
-												<div class="main"
-													style="background-image: url('img/testimonials/tecrypts.jpeg');">
-												</div>
-											</div>
-											<div class="detail">
-												<h3 data-translate="partner_tecrypts_name">Tecrypts</h3>
-												<span data-translate="partner_tecrypts_role">Cybersecurity – Nasr
-													City</span>
-											</div>
-										</div>
-									</div>
-
+								<div class="slider-wrapper">
+									<div class="testimonial-slide" id="testimonial-slide"></div>
+									<div class="slider-dots" id="testimonial-dots"></div>
 								</div>
 							</div>
 						</div>
@@ -897,136 +782,17 @@
 		<!-- /TESTIMONIALS -->
 
 
-
 		<!-- PARTNERS -->
 		<div class="shark_tm_section">
 			<div class="shark_tm_partners">
 				<div class="container">
-					<div class="partners_list tilt-effect wow fadeInUp" data-wow-duration="1s">
-						<ul class="owl-carousel partners-carousel">
-
-							<li class="item">
-								<img src="img/partners/el-shams.png" alt="el-shams" />
-							</li>
-							<li class="item">
-								<img src="img/partners/flamingo.png" alt="flamingo" />
-							</li>
-							<li class="item">
-								<img src="img/partners/inno-code.png" alt="inno-code" />
-							</li>
-							<li class="item">
-								<img src="img/partners/summit.png" alt="summit" />
-							</li>
-							<li class="item">
-								<img src="img/partners/tecrypts.png" alt="tecrypts" />
-							</li>
-						</ul>
-
+					<div class="partners_slider_wrapper">
+						<ul id="partners-slider" class="partners-static-track"></ul>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- /PARTNERS -->
 
-
-		<!-- BLOG
-		<div class="shark_tm_section" id="blog">
-			<div class="shark_tm_news">
-				<div class="container">
-					<div class="shark_tm_main_title">
-						<span>Blog</span>
-						<h3>Insights & Updates from Shark Office</h3>
-					</div>
-					<div class="news_list">
-						<ul>
-							<li class="wow fadeInUp" data-wow-duration="1s">
-								<div class="list_inner tilt-effect">
-									<div class="image">
-										<img src="img/thumbs/42-29.jpg" alt="" />
-										<div class="main" data-img-url="img/news/coworking.png"></div>
-										<a class="shark_tm_full_link" href="#"></a>
-									</div>
-									<div class="details">
-										<div class="meta">
-											<p><a href="#">Co-working</a> June 2025</p>
-										</div>
-										<div class="title">
-											<h3><a href="#">Why co-working spaces boost team productivity</a></h3>
-										</div>
-									</div>
-									<div class="news_hidden_details">
-										<div class="news_popup_informations">
-											<div class="text">
-												<p>Co-working environments are designed to inspire creativity and
-													increase productivity. At Shark Office, we provide professional
-													spaces that help small teams and freelancers work efficiently and
-													stay motivated.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-								<div class="list_inner tilt-effect">
-									<div class="image">
-										<img src="img/thumbs/42-29.jpg" alt="" />
-										<div class="main" data-img-url="img/news/workplace.png"></div>
-										<a class="shark_tm_full_link" href="#"></a>
-									</div>
-									<div class="details">
-										<div class="meta">
-											<p><a href="#">Workplace</a> May 2025</p>
-										</div>
-										<div class="title">
-											<h3><a href="#">Flexible office solutions for modern professionals</a></h3>
-										</div>
-									</div>
-									<div class="news_hidden_details">
-										<div class="news_popup_informations">
-											<div class="text">
-												<p>Whether you need a meeting room for an hour or a private office for a
-													month, Shark Office offers flexible options tailored to your
-													business needs. Our plans are designed to adapt to you.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-								<div class="list_inner tilt-effect">
-									<div class="image">
-										<img src="img/thumbs/42-29.jpg" alt="" />
-										<div class="main" data-img-url="img/news/tips.png"></div>
-										<a class="shark_tm_full_link" href="#"></a>
-									</div>
-									<div class="details">
-										<div class="meta">
-											<p><a href="#">Tips</a> April 2025</p>
-										</div>
-										<div class="title">
-											<h3><a href="#">How small teams can maximize shared spaces</a></h3>
-										</div>
-									</div>
-									<div class="news_hidden_details">
-										<div class="news_popup_informations">
-											<div class="text">
-												<p>Working in a shared environment doesn't mean compromising on privacy
-													or focus. Learn how small teams can make the most of co-working
-													spaces by setting clear goals and using breakout rooms effectively.
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		/BLOG -->
 
 
 		<!-- CONTACT -->
@@ -1085,7 +851,8 @@
 								<form action="/" method="post" class="contact_form" id="contact_form"
 									autocomplete="off">
 									<div class="returnmessage"
-										data-success="Your message has been received, We will contact you soon."></div>
+										data-success="Your message has been received, We will contact you soon.">
+									</div>
 									<div class="empty_notice"><span>Please Fill Required Fields</span></div>
 									<div class="input_list">
 										<ul>
@@ -1126,7 +893,8 @@
 						<div class="left wow fadeInLeft" data-wow-duration="1s">
 							<span class="subtitle" data-translate="subscribe_subtitle">Stay Connected</span>
 							<h3 class="title" data-translate="subscribe_title">Have a Question?</h3>
-							<p class="text" data-translate="subscribe_text">Leave your email and we'll contact you soon.
+							<p class="text" data-translate="subscribe_text">Leave your email and we'll contact you
+								soon.
 							</p>
 						</div>
 						<div class="right wow fadeInRight" data-wow-duration="1s">
@@ -1171,39 +939,39 @@
 
 	<!-- SCRIPTS -->
 
+<script>
+  const toggleBtn = document.getElementById("mobileMenuToggle");
+  const navMenu = document.getElementById("mobileNavLinks");
+
+  toggleBtn.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+  });
+
+  // إغلاق القائمة لما نضغط على أي عنصر
+  document.querySelectorAll("#mobileNavLinks a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+</script>
+
 	<!-- jQuery CDN -->
+
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 	<!-- Owl Carousel CDN -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-
 	<script>
 		window.scrollTo = function () { };
 	</script>
 	<script src="js/plugins.js"></script>
-	<script src="js/translation.js"></script>
 
+	<script src="js/translations.js"></script>
 	<script src="js/init.js"></script>
+
 	<script src="js/index.js"></script>
-	<script>
-		jQuery(window).on('load', function () {
-			console.log("✅ الصفحة اتحملت");
-			if ($('.testimonials-carousel').length > 0) {
-				console.log("✅ الكاروسيل موجود");
-				$('.testimonials-carousel').owlCarousel({
-					loop: true,
-					items: 1,
-					dots: true,
-					nav: false,
-					autoplay: true,
-					autoplayTimeout: 4000
-				});
-			} else {
-				console.log("❌ الكاروسيل مش موجود في الصفحة");
-			}
-		});
-	</script>
+
 
 
 

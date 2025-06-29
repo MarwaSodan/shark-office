@@ -47,34 +47,28 @@ img.svg {
 }
 
 ::-webkit-input-placeholder {
-	/* WebKit, Blink, Edge */
 	color: var(--main-color);
 }
 
 :-moz-placeholder {
-	/* Mozilla Firefox 4 to 18 */
 	color: var(--main-color);
 	opacity: 1;
 }
 
 ::-moz-placeholder {
-	/* Mozilla Firefox 19+ */
 	color: var(--main-color);
 	opacity: 1;
 }
 
 :-ms-input-placeholder {
-	/* Internet Explorer 10-11 */
 	color: var(--main-color);
 }
 
 ::-ms-input-placeholder {
-	/* Microsoft Edge */
 	color: var(--main-color);
 }
 
 ::placeholder {
-	/* Most modern browsers support this now. */
 	color: var(--main-color);
 }
 
@@ -162,11 +156,8 @@ h6 {
 .shark_tm_all_wrap,
 .shark_tm_all_wrap * {
 	-webkit-box-sizing: border-box;
-	/* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;
-	/* Firefox, other Gecko */
 	box-sizing: border-box;
-	/* Opera/IE 8+ */
 }
 
 #preloader {
@@ -271,7 +262,6 @@ h6 {
 	}
 }
 
-/*hiding all*/
 .preloaded .loader_line:after {
 	opacity: 0;
 }
@@ -310,111 +300,109 @@ h6 {
 
 }
 
-/*---------------------------------------------------*/
-/*	02) SHARK MOBILE MENU
-/*---------------------------------------------------*/
 
-.shark_tm_mobile_menu {
-	width: 100%;
-	height: auto;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	display: none;
-	z-index: 10;
+
+
+.shark_tm_mobile_nav {
+  display: none;
+  background-color: #1e1345;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
-.shark_tm_mobile_menu .mobile_menu_inner {
-	width: 100%;
-	height: auto;
-	float: left;
-	clear: both;
-	background-color: #1e1345;
-	border-bottom: 1px solid rgba(255, 255, 255, .1);
-	padding: 10px 20px 10px 20px;
+.shark_tm_mobile_nav .mobile_nav_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.hamburger-inner,
-.hamburger-inner:after,
-.hamburger-inner:before {
-	background-color: #fff;
+.shark_tm_mobile_nav .logo img {
+  max-width: 120px;
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.mobile_nav_links {
+  display: none;
+  flex-direction: column;
+  background-color: #1e1345;
+  padding: 20px 0;
+}
+
+.mobile_nav_links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.mobile_nav_links ul li {
+  margin: 10px 0;
+}
+
+.mobile_nav_links ul li a,
+.mobile_nav_links ul li button {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+.mobile_menu ul li a:hover {
+  color: var(--extra-color); /* أو استخدمي أي لون أزرق تحبيه */
+}
+
+.mobile_menu {
+  display: none;
+}
+
+.mobile_menu.active {
+  display: block;
 }
 
 .hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner:after,
-.hamburger.is-active .hamburger-inner:before {
-	background-color: #fff;
+.hamburger.is-active .hamburger-inner:before,
+.hamburger.is-active .hamburger-inner:after {
+  background-color: var(--extra-color); /* نفس اللون */
 }
 
-.shark_tm_mobile_menu .mobile_in {
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+@media (max-width: 992px) {
+  .shark_tm_mobile_nav {
+    display: block;
+  }
 }
 
-.shark_tm_mobile_menu .mobile_in .logo img {
-	max-width: 120px;
-	max-height: 70px;
+
+/* عند الفتح */
+.mobile_nav_links.active {
+  display: flex;
 }
 
-.shark_tm_mobile_menu .trigger {
-	line-height: 0;
+/* hover على عناصر القائمة */
+.mobile_nav_links ul li a:hover {
+  color: var(--extra-color); /* خلي الأزرق بتاعك */
 }
 
-.shark_tm_mobile_menu .dropdown {
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	background-color: #1e1345;
-	display: none;
-}
 
-.shark_tm_mobile_menu .dropdown .dropdown_inner {
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	padding: 25px 40px;
-}
 
-.shark_tm_mobile_menu .dropdown .dropdown_inner ul {
-	margin: 0px;
-	list-style-type: none;
-}
-
-.shark_tm_mobile_menu .dropdown .dropdown_inner ul li {
-	margin: 0px;
-	float: left;
-	width: 100%;
-}
-
-.shark_tm_mobile_menu .dropdown .dropdown_inner ul li a {
-	text-decoration: none;
-	color: #fff;
-	display: inline-block;
-	padding: 0px 0px;
-	font-weight: 500;
-}
-
-.shark_tm_mobile_menu .hamburger-inner,
-.shark_tm_mobile_menu .hamburger-inner:after,
-.shark_tm_mobile_menu .hamburger-inner:before {
-	width: 30px;
-	height: 2px;
-}
-
-.shark_tm_mobile_menu .hamburger-box {
-	width: 30px;
-}
-
-.shark_tm_mobile_menu .hamburger {
-	padding: 0px;
-}
 
 /*---------------------------------------------------*/
 /*	03) SHARK HEADER
@@ -540,7 +528,62 @@ h6 {
 	color: var(--extra-color);
 }
 
----------------------------------------------------
+
+/* لإضافة مسافة بين explore و contact */
+.nav-space-before {
+	margin-inline: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+	.shark_tm_header .menu ul li {
+		margin-left: 15px;
+		margin-right: 0;
+	}
+
+	body[dir="rtl"] .shark_tm_header .menu ul li {
+		margin-right: 15px;
+		margin-left: 0;
+	}
+}
+
+
+/* مسافات بين عناصر القائمة في RTL */
+body[dir="rtl"] .shark_tm_header .menu ul li {
+	margin-left: 25px;
+	/* كانت 0px أو صغيرة جداً */
+}
+
+/* نحافظ على آخر عنصر بدون margin */
+body[dir="rtl"] .shark_tm_header .menu ul li:last-child {
+	margin-left: 0;
+}
+
+/* تعديل بسيط على السوشيال + اللغة */
+body[dir="rtl"] .shark_tm_header .social {
+	margin-left: 30px;
+	margin-right: 0;
+}
+
+body[dir="rtl"] .shark_tm_header .language-switcher {
+	margin-left: 0;
+	margin-right: 20px;
+}
+
+/* نحط padding صغير للـ <ul> نفسه لتوسيع المجال */
+body[dir="rtl"] .shark_tm_header .menu ul {
+	padding: 0 10px;
+}
+
+/* نقدر نضيف فاصل بين استكشاف واتصل بنا */
+body[dir="rtl"] .nav-space-before {
+	padding-inline: 10px;
+	margin-inline: 10px;
+}
+
+
+/* --------------------------------------------------- */
 /*	04) SHARK HERO
 /*---------------------------------------------------*/
 
@@ -1086,22 +1129,33 @@ h6 {
 }
 
 .shark_tm_skills .list {
-	width: 100%;
-	height: auto;
-	clear: both;
 	display: flex;
+	gap: 30px;
 	margin-top: 47px;
 }
 
-.shark_tm_skills .left {
-	width: 50%;
-	padding-right: 67px;
-}
-
+.shark_tm_skills .left,
 .shark_tm_skills .right {
 	width: 50%;
-	padding-left: 67px;
+	padding: 0 15px;
+	box-sizing: border-box;
 }
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+
+	.shark_tm_skills .left,
+	.shark_tm_skills .right {
+		width: 100%;
+		padding: 0;
+	}
+
+	.shark_tm_skills .list {
+		flex-direction: column;
+		gap: 40px;
+	}
+}
+
 
 .dodo_progress {
 	width: 100%;
@@ -1569,6 +1623,7 @@ h6 {
 	font-weight: 600;
 }
 
+
 /*---------------------------------------------------*/
 /*	11) SHARK Explore
 /*---------------------------------------------------*/
@@ -1601,7 +1656,7 @@ h6 {
 }
 
 .shark_tm_portfolio .portfolio_filter ul li:last-child {
-	margin-right: 0px;
+	margin-right: 50px;
 }
 
 .shark_tm_portfolio .portfolio_filter ul li a {
@@ -2067,6 +2122,7 @@ h6 {
 
 
 
+
 /*---------------------------------------------------*/
 /*	12) Shark TESTIMONIALS
 /*---------------------------------------------------*/
@@ -2078,11 +2134,7 @@ h6 {
 	float: left;
 	margin-bottom: 170px;
 	position: relative;
-	z-index: 111111111111111111;
-	  min-height: 300px;
-  background: rgba(255, 0, 0, 0.1);
-  z-index: 9999;
-  position: relative;
+	min-height: 300px;
 }
 
 .shark_tm_testimonials .list_wrapper {
@@ -2092,7 +2144,6 @@ h6 {
 	float: left;
 	position: relative;
 	margin-top: 50px;
-	/* z-index: 1000000000; */
 }
 
 .shark_tm_testimonials .in {
@@ -2276,24 +2327,117 @@ h6 {
 	font-size: 14px;
 	color: #888;
 }
+
 .testimonials-carousel .item {
-  min-height: 200px;
-  background: red;
+	min-height: 200px;
+	background: red;
 }
 
 .testimonials-carousel {
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  height: auto !important;
-  overflow: visible !important;
+	display: none;
 }
 
+
 .testimonials-carousel .item {
-  background: lightblue !important;
-  min-height: 200px;
-  color: black;
+	background: lightblue !important;
+	min-height: 200px;
+	color: black;
 }
+
+.owl-nav {
+	display: none !important;
+}
+
+
+.owl-carousel .owl-stage-outer {
+	overflow: hidden;
+}
+
+.owl-carousel .owl-item img {
+	width: auto;
+	max-width: 100%;
+	display: inline-block;
+}
+
+.testimonials-carousel {
+	display: block;
+	height: auto;
+	overflow: hidden;
+}
+
+.slider-wrapper {
+	position: relative;
+	max-width: 900px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.testimonial-slide {
+	position: relative;
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+}
+
+.testimonial-slide .item {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	opacity: 0;
+	transform: translateX(100%);
+	transition: all 0.6s ease-in-out;
+	z-index: 1;
+}
+
+.testimonial-slide .item.active {
+	left: 0;
+	opacity: 1;
+	transform: translateX(0%);
+	z-index: 2;
+}
+
+
+.slider-controls {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.slider-controls button {
+	background-color: var(--extra-color);
+	border: none;
+	color: white;
+	font-size: 20px;
+	padding: 10px 15px;
+	margin: 0 5px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.slider-controls button:hover {
+	background-color: #333;
+}
+
+.slider-dots {
+	text-align: center;
+	margin-top: 25px;
+}
+
+.slider-dots .dot {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin: 0 6px;
+	background-color: #aaa;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.slider-dots .dot.active {
+	background-color: var(--extra-color);
+}
+
 
 
 /*---------------------------------------------------*/
@@ -2350,6 +2494,156 @@ h6 {
 .shark_tm_partners .owl-carousel .owl-stage {
 	display: flex;
 	align-items: center;
+}
+
+.partners-slider-wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+.partners-slider {
+	display: flex;
+	transition: transform 0.6s ease-in-out;
+	will-change: transform;
+}
+
+.partners-slider li {
+	flex: 0 0 auto;
+	width: 200px;
+	margin-right: 30px;
+	opacity: 0.5;
+	transition: opacity 0.3s ease;
+}
+
+.partners-slider li:hover {
+	opacity: 1;
+}
+
+.partners-slider img {
+	max-width: 95%;
+	max-height: 180px;
+}
+
+.partners_list_slider {
+	width: 100%;
+	overflow: hidden;
+	background-color: #432d92;
+	border-radius: 12px;
+	padding: 70px 0;
+	position: relative;
+}
+
+.partners-track {
+	display: flex;
+	gap: 30px;
+	transition: transform 0.6s ease-in-out;
+	will-change: transform;
+}
+
+.partners-track li {
+	flex: 0 0 auto;
+	width: 160px;
+	/* أو حسب حجم صورتك */
+	opacity: 0.5;
+	transition: opacity 0.3s ease;
+	text-align: center;
+}
+
+.partners-track li:hover {
+	opacity: 1;
+}
+
+.partners-track li img {
+	max-width: 100%;
+	height: auto;
+	max-height: 120px;
+}
+
+.partners_slider_wrapper {
+	width: 100%;
+	overflow: hidden;
+	background-color: #432d92;
+	border-radius: 12px;
+	padding: 70px 0;
+}
+
+.partners-slider-track {
+	display: flex;
+	gap: 30px;
+	transition: transform 0.6s ease-in-out;
+	will-change: transform;
+}
+
+#partners-slider {
+	display: flex;
+	gap: 30px;
+	transition: transform 0.6s ease-in-out;
+	will-change: transform;
+}
+
+.partners-slider-track li {
+	flex: 0 0 calc((100% - 120px) / 5);
+	/* 5 صور + 4 فواصل (4x30px = 120px) */
+	opacity: 0.5;
+	text-align: center;
+	transition: opacity 0.3s ease;
+}
+
+.partners-slider-track li:hover {
+	opacity: 1;
+}
+
+.partners-slider-track li img {
+	max-width: 100%;
+	height: auto;
+	max-height: 120px;
+}
+
+
+.partners-slider-track li {
+  flex: 0 0 calc((100% - 120px) / 5); /* 5 صور مع 30px فراغ */
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+.partners-slider-track li {
+  flex: 0 0 calc((100% - 120px) / 5);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.partners-slider-track li img {
+  max-width: 100%;
+  height: auto;
+  max-height: 120px;
+}
+
+/* ثابتين في صف واحد */
+#partners-slider.partners-static-track {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 30px;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+#partners-slider.partners-static-track li {
+  flex: 0 0 calc((100% - 120px) / 5); /* 5 صور مع 4 فواصل */
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+#partners-slider.partners-static-track li:hover {
+  opacity: 1;
+}
+
+#partners-slider.partners-static-track li img {
+  max-width: 100%;
+  height: auto;
+  max-height: 120px;
 }
 
 /*---------------------------------------------------*/
@@ -2736,6 +3030,18 @@ input[type=number] {
 	font-weight: 500;
 }
 
+/* لما تكون اللغة عربي - RTL */
+body[dir="rtl"] .shark_tm_contact .left .list_inner {
+  flex-direction: row;
+}
+
+body[dir="rtl"] .shark_tm_contact .left .short {
+  padding-left: 0;
+  padding-right: 25px; /* نفس المسافة بس من اليمين */
+  text-align: right;
+}
+
+
 /*---------------------------------------------------*/
 /*	16) Shark SUBSCRIBE
 /*---------------------------------------------------*/
@@ -2848,6 +3154,18 @@ input[type=number] {
 		width: 100%;
 		border-radius: 12px;
 	}
+}
+
+/* لو الاتجاه LTR */
+body[dir="ltr"] .shark_tm_subscribe .field input[type="text"] {
+  padding-left: 70px;
+  padding-right: 20px;
+}
+
+/* لو الاتجاه RTL */
+body[dir="rtl"] .shark_tm_subscribe .field input[type="text"] {
+  padding-right: 200px;
+  padding-left: 20px;
 }
 
 
@@ -3709,7 +4027,8 @@ body[dir="rtl"] .shark_tm_mobile_menu .mobile_in {
 }
 
 body[dir="rtl"] .shark_tm_header .menu ul li {
-	margin: 0 0 0 40px; /* انعكاس المارجن */
+	margin: 0 0 0 25px;
+	/* انعكاس المارجن */
 }
 
 body[dir="rtl"] .shark_tm_header .menu ul li:last-child {
@@ -3739,170 +4058,46 @@ body[dir="rtl"] .language-switcher {
 	margin-left: 0;
 }
 
+body[dir="rtl"] .shark_tm_mobile_menu .language-switcher {
+	align-self: flex-end;
+}
+
+body[dir="ltr"] .shark_tm_mobile_menu .language-switcher {
+	align-self: flex-start;
+}
+
+
 /* تعديل بسيط للـقائمة */
 body[dir="rtl"] .shark_tm_mobile_menu .dropdown .dropdown_inner ul li a {
 	text-align: right;
 	display: block;
 }
 
+/* ==================================================================================================================================================== */
 
 
 
-/* ✅ RTL Support */
-body[dir="rtl"] .shark_tm_hero .content {
-	flex-direction: row-reverse;
-	text-align: right;
-}
+/* ============================================================================================================================================================ */
 
-body[dir="rtl"] .shark_tm_hero .right {
-	padding-left: 0;
-	padding-right: 80px;
-}
 
-/* ✅ Responsive adjustments */
-@media (max-width: 991px) {
-	.shark_tm_hero .content {
-		flex-direction: column;
-		justify-content: center;
-		text-align: center;
-		margin-top: 0;
-		gap: 2rem;
-	}
+/* ========================================================================================================================================================= */
 
-	.shark_tm_hero .left,
-	.shark_tm_hero .right {
-		width: 100%;
-		padding: 0;
-	}
 
-	body[dir="rtl"] .shark_tm_hero .right {
-		padding-right: 0;
-	}
 
-	.shark_tm_hero .name {
-		font-size: 48px;
-	}
 
-	.shark_tm_hero .job {
-		font-size: 18px;
-	}
 
-	.shark_tm_button a {
-		padding: 14px 30px;
-		font-size: 15px;
-	}
+@media (min-width: 1200px) {
 
-	.shark_tm_hero .right img {
-		max-width: 280px;
-		max-height: 280px;
-		margin: 0 auto;
+	body,
+	.shark_tm_all_wrap,
+	.shark_tm_section,
+	.shark_tm_about,
+	.shark_tm_testimonials,
+	.shark_tm_portfolio,
+	.container {
+		display: block !important;
+		opacity: 1 !important;
+		visibility: visible !important;
+		height: auto !important;
 	}
 }
-
-
-
-/* ✅ RTL adjustments */
-body[dir="rtl"] .shark_tm_features .list ul {
-	margin: 0px -25px 0px 0px; /* عكس الاتجاه */
-}
-
-body[dir="rtl"] .shark_tm_features .list ul li {
-	padding-left: 0;
-	padding-right: 25px;
-}
-
-/* ✅ Responsive styles */
-@media (max-width: 991px) {
-	.shark_tm_features .list ul li {
-		width: 50%; /* عنصرين في الصف */
-	}
-
-	.shark_tm_features .list ul li .list_inner {
-		padding: 40px 30px;
-	}
-}
-
-@media (max-width: 576px) {
-	.shark_tm_features .list ul li {
-		width: 100%; /* عنصر واحد في الصف */
-	}
-
-	.shark_tm_features .list ul {
-		margin: 0; /* شيل المارجن تمامًا */
-	}
-
-	body[dir="rtl"] .shark_tm_features .list ul {
-		margin: 0; /* شيل المارجن كمان في RTL */
-	}
-
-	.shark_tm_features .list ul li {
-		padding: 0 0 40px;
-	}
-}
-
-
-
-/* ✅ RTL adjustments */
-body[dir="rtl"] .shark_tm_about .right {
-	padding-left: 0;
-	padding-right: 40px;
-	text-align: right;
-}
-
-body[dir="rtl"] .shark_tm_about .experience .inner {
-	padding-left: 0;
-	padding-right: 25px;
-	flex-direction: row-reverse;
-}
-
-body[dir="rtl"] .shark_tm_about .experience .inner:before {
-	left: auto;
-	right: 0;
-}
-
-body[dir="rtl"] .shark_tm_about .experience .inner span {
-	padding-left: 0;
-	padding-right: 20px;
-}
-
-body[dir="rtl"] .shark_tm_about .small_image {
-	right: auto;
-	left: 100%;
-	margin-right: 0;
-	margin-left: -100px;
-}
-
-body[dir="rtl"] .shark_tm_about .badge {
-	right: auto;
-	left: 100%;
-	margin-right: 0;
-	margin-left: 45px;
-}
-
-/* ✅ Responsive RTL (شاشات صغيرة) */
-@media (max-width: 991px) {
-	body[dir="rtl"] .shark_tm_about .right {
-		padding-right: 0;
-		text-align: center;
-	}
-
-	body[dir="rtl"] .shark_tm_about .small_image,
-	body[dir="rtl"] .shark_tm_about .badge,
-	body[dir="rtl"] .shark_tm_about .experience {
-		left: auto;
-		right: auto;
-		margin: 20px auto 0;
-		text-align: center;
-	}
-
-	body[dir="rtl"] .shark_tm_about .experience .inner {
-		flex-direction: row;
-		justify-content: center;
-	}
-
-	body[dir="rtl"] .shark_tm_about .experience .inner:before {
-		display: none;
-	}
-}
-
-
