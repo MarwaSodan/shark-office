@@ -506,37 +506,48 @@ function applyTranslations(lang) {
 }
 
 
+
 function startTypewriter(lang) {
   const phrases = translations[lang].typewriter;
   const el = document.getElementById("typewriter");
-  let i = 0;
-  let j = 0;
+
+  let i = 0;      // الجملة الحالية
+  let j = 0;      // الحرف الحالي داخل الجملة
   let isDeleting = false;
 
   function type() {
     if (!el) return;
 
     const currentPhrase = phrases[i];
-    el.textContent = currentPhrase.slice(0, j) + (j % 2 === 0 ? "|" : "");
+
+    // كتابة الجملة أو مسحها
+    el.innerText = currentPhrase.slice(0, j) + (isDeleting ? "" : "|");
 
     if (isDeleting) {
       j--;
-      if (j === 0) {
+      if (j < 0) {
         isDeleting = false;
         i = (i + 1) % phrases.length;
+        setTimeout(type, 1000); // استنى قبل ما يكتب الجملة الجديدة
+        return;
       }
     } else {
       j++;
-      if (j === currentPhrase.length) {
-        isDeleting = true;
+      if (j > currentPhrase.length) {
+        setTimeout(() => {
+          isDeleting = true;
+          type();
+        }, 2000); // استنى بعد ما يكتب الجملة كاملة
+        return;
       }
     }
 
-    setTimeout(type, isDeleting ? 1 : 1);
+    setTimeout(type, isDeleting ? 150 : 200); // سرعة الحذف والكتابة
   }
 
   type();
 }
+
 
 
 // بعد تغيير اللغة
